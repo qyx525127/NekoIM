@@ -1,0 +1,440 @@
+[Skin_Description_Section]
+  Name=Nekonazo
+  SubStyle=Normal                                    
+  Author=Unknown N.S.
+  Contact=unknownsoli@hotmail.com
+  URL=oekaki.so
+  Preview=Preview.jpg
+  Description=(for internal use only)
+
+[ModernSkin]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Graphical elements section
+
+; WINDOW ELEMENTS
+; Background
+	$Window/Background=sGlyph,Image,back.png,StretchBoth,115,150,53,0,255
+
+; Minimize button
+	$Button/Minimize/Normal=sGlyph,Image,Mini.png,StretchBoth,0,0,0,0,255
+	$Button/Minimize/Hovered=sGlyph,Image,MiniHov.png,StretchBoth,0,0,0,0,255
+	$Button/Minimize/Down=sGlyph,Image,MiniDn.png,StretchBoth,0,0,0,0,255
+; Scroll bar
+	$Scrollbar/Back=sGlyph,Image,Scrollbar.png,StretchBoth,0,27,0,27,255
+	$Scrollbar/Up=sGlyph,Image,ScrollbarUp.png,StretchBoth,0,0,0,0,255
+	$Scrollbar/Down=sGlyph,Image,ScrollbarDown.png,StretchBoth,0,0,0,0,255
+	$Scrollbar/Thumb=sGlyph,Image,ScrollbarThumb.png,TileVert,0,11,0,11,255
+
+; CONTACT LIST ELEMENTS
+; An open group
+	$Group/Open/Normal=sGlyph,Image,Group.png,StretchBoth,0,0,0,0,255
+	$Group/Open/Hot=sGlyph,Image,GroupHot.png,StretchBoth,0,0,0,0,255
+; A closed group
+	$Group/Closed/Normal=sGlyph,Image,Group.png,StretchBoth,0,0,0,0,255
+	$Group/Closed/Hot=sGlyph,Image,GroupHot.png,StretchBoth,0,0,0,0,255
+; A contact row
+	$Contact/Hot=sGlyph,Image,ContactHot.png,StretchBoth,0,0,0,0,255
+	$Contact/Even=sGlyph,Image,ContactEven.png,StretchBoth,55,0,55,0,0
+	$Contact/Odd=sGlyph,Image,ContactEven.png,StretchBoth,55,0,55,0,0
+;	$Contact/Normal=sGlyph,Image,ContactEven.png,StretchBoth,0,0,0,0,255
+; A selected contact row
+	$Contact/Select=sGlyph,Image,Select.png,TileHoriz,0,1,0,1,155
+
+; TOP BUTTON ELEMENT
+
+;Main Menue
+  $BTNmmNormal=sGlyph,Image,icon_norm.png,StretchBoth,0,48,0,0,255
+  $BTNmmHovered=sGlyph,Image,icon_hov.png,StretchBoth,0,48,0,0,200
+  $BTNmmDown=sGlyph,Image,icon_down.png,StretchBoth,0,48,0,0,255
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Rules section
+
+; WINDOW ELEMENTS
+; Background image
+ 	@10=s$Window/Background:Main,ID=Background
+	@2=s$FrameImg:Main,ID=FrameCaption
+
+
+;Minimize button
+	@40=s$Button/Minimize/Down:MButton,ID=ActionMinimize,Down=1
+	@41=s$Button/Minimize/Hovered:MButton,ID=ActionMinimize,Hovered=1
+	@42=s$Button/Minimize/Normal:MButton,ID=ActionMinimize
+
+;Scroll bar
+	@65=s$Scrollbar/Back:Main,ID=ScrollBar,Part=Back
+	@66=s$Scrollbar/Up:Main,ID=ScrollBar,Part=UpLineButton
+	@67=s$Scrollbar/Down:Main,ID=ScrollBar,Part=DownLineButton
+ 	@68=s$Scrollbar/Thumb:Main,ID=ScrollBar,Part=Thumb
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; CONTACT LIST ELEMENTS
+;An open group
+	@60=s$Group/Open/Hot:CL,ID=Row,Type=Group,Open=True,Hot=True
+	@61=s$Group/Open/Normal:CL,ID=Row,Type=Group,Open=True
+;A closed group
+	@70=s$Group/Closed/Hot:CL,ID=Row,Type=Group,Open=False,Hot=True
+	@71=s$Group/Closed/Normal:CL,ID=Row,Type=Group,Open=False
+;A contatct row
+  	@80=s$Contact/Hot:CL,ID=Row,Type=*Contact,Hot=True
+	@81=s$Contact/Even:CL,ID=Row,Type=*Contact,Odd=False
+	@83=s$Contact/Odd:CL,ID=Row,Type=*Contact,Odd=True
+;A selected contact row
+  	@85=s$Contact/Select:CL,ID=Selection
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;TOP BUTTON ELEMENTS
+
+  @13=s$BTNmenuDn:MButton,ID=mainmenu,Down=1
+  @14=s$BTNmenuhov:MButton,ID=mainmenu,Hovered=1
+  @15=s$BTNmenunorm:MButton,ID=mainmenu
+  
+  @49=s$BTNmmDown:MButton,ID=mm,Down=1
+  @50=s$BTNmmHovered:MButton,ID=mm,Hovered=1
+  @51=s$BTNmmNormal:MButton,ID=mm
+  
+
+;Show menu button
+;  @210=s$Button/Menu/Down:MButton,ID=ActionMainMenu,Down=1
+;  @211=s$Button/Menu/Hovered:MButton,ID=ActionMainMenu,Hovered=1
+;  @212=s$Button/Menu/Normal:MButton,ID=ActionMainMenu
+	
+
+	
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Actions section
+
+; WINDOW ELEMENTS
+
+; Minimize button
+	#ActionMinimize=sPush,CList/ShowHide,-42,3,-2,30,R-R--,0,0,Minimize
+
+; TOP BUTTON ELEMENT
+
+;Main Menue
+  #mm=sPush,CList/ShowMainMenu,3,3,50,27,-----,0,0,Show Main Menu
+
+
+[CLUI]
+	LeftClientMargin=b5
+	TopClientMargin=b28
+	RightClientMargin=b5
+	BottomClientMargin=b3
+
+;----------------------------------------------
+;Clist-Modern (Transparente Farbe)
+;----------------------------------------------
+[ModernSettings]
+UseKeyColor=b1
+KeyColor=d8618883
+
+[CLC]
+  HiLightMode=b1
+  GroupIndent=b0
+[CLC]
+InfoTipHoverTime=w300
+Font0Flags=d395
+Font1Flags=d395
+Font2Flags=d395
+Font7Flags=d395
+Font3Flags=d395
+Font4Flags=d395
+Font5Flags=d395
+Font6Flags=d395
+Font8Flags=d297
+Font9Flags=d297
+Font10Flags=d297
+Font11Flags=d297
+HiLightMode=b1
+GroupIndent=b0
+LeftMargin=b4
+RightMargin=b2
+Meta=b0
+MetaDoubleClick=b0
+MetaHideExtra=b0
+MetaIgnoreEmptyExtra=b1
+MetaHideOfflineSub=b1
+MetaExpanding=b1
+SubIndent=b25
+RoundCorners=b0
+FullGreyoutFlags=d-1073741822
+GreyoutFlags=d0
+ShowIdle=b0
+OfflineModes=d1073741824
+ScrollTime=w150
+NoVScrollBar=b0
+Font0Set=b0
+Font0Size=b8
+Font0Sty=b1
+Font0Col=d16777215
+Font0As=w255
+Font1Set=b0
+Font1Size=b8
+Font1Sty=b2
+Font1Col=d16777215
+Font1As=w2816
+Font2Set=b0
+Font2Size=b7
+Font2Sty=b1
+Font2Col=d11579568
+Font2As=w0
+Font3Set=b0
+Font3Size=b8
+Font3Sty=b3
+Font3Col=d255
+Font3As=w768
+Font4Set=b0
+Font4Size=b8
+Font4Sty=b1
+Font4Col=d16777215
+Font4As=w0
+Font5Set=b0
+Font5Size=b6
+Font5Sty=b0
+Font5Col=d16777215
+Font5As=w35076
+Font6Set=b0
+Font6Size=b8
+Font6Sty=b1
+Font6Col=d16777215
+Font6As=w36612
+Font7Set=b0
+Font7Size=b7
+Font7Sty=b3
+Font7Col=d11579568
+Font7As=w35586
+Font8Set=b0
+Font8Size=b7
+Font8Sty=b0
+Font8Col=d15724527
+Font8As=w0
+Font9Set=b0
+Font9Size=b7
+Font9Sty=b0
+Font9Col=d15724527
+Font9As=w36616
+Font10Set=b0
+Font10Size=b8
+Font10Sty=b1
+Font10Col=d16777215
+Font10As=w36608
+Font11Set=b0
+Font11Size=b8
+Font11Sty=b1
+Font11Col=d16777215
+Font11As=w36608
+Font12Set=b0
+Font12Size=b8
+Font12Sty=b1
+Font12Col=d16777215
+Font12As=w36608
+Font13Set=b0
+Font13Size=b8
+Font13Sty=b1
+Font13Col=d16777215
+Font13As=w36608
+Font14Set=b0
+Font14Size=b8
+Font14Sty=b1
+Font14Col=d16777215
+Font14As=w36608
+Font15Set=b0
+Font15Size=b8
+Font15Sty=b3
+Font15Col=d8421504
+Font15As=w512
+Font16Set=b0
+Font16Size=b8
+Font16Sty=b1
+Font16Col=d16777215
+Font16As=w36608
+Font17Set=b0
+Font17Size=b8
+Font17Sty=b1
+Font17Col=d16777215
+Font17As=w36608
+Font18Set=b0
+Font18Size=b7
+Font18Sty=b0
+Font18Col=d15724527
+Font18As=w36616
+Font19Set=b0
+Font19Size=b8
+Font19Sty=b1
+Font19Col=d16777215
+Font19As=w36612
+Font20Set=b0
+Font20Size=b6
+Font20Sty=b0
+Font20Col=d16777215
+Font20As=w36613
+GammaCorrect=b1
+RowHeight=b18
+HotTextColour=d16777215
+DoNotCheckFontSize=b0
+DualRowMode=b1
+IgnoreSelforGroups=b1
+RowGap=b0
+QuickSearchColour=d255
+RowBorder=b2
+Font0Effect=b2
+Font0EffectCol1=d1677721600
+Font0EffectCol2=d0
+Font1Effect=b0
+Font1EffectCol1=d1677721600
+Font1EffectCol2=d0
+Font2Effect=b0
+Font2EffectCol1=d5987163
+Font2EffectCol2=d0
+Font3Effect=b0
+Font3EffectCol1=d-2013265920
+Font3EffectCol2=d0
+Font4Effect=b0
+Font4EffectCol1=d1973790
+Font4EffectCol2=d0
+Font5Effect=b0
+Font5EffectCol1=d1973790
+Font5EffectCol2=d0
+Font6Effect=b0
+Font6EffectCol1=d1973790
+Font6EffectCol2=d0
+Font7Effect=b0
+Font7EffectCol1=d5987163
+Font7EffectCol2=d0
+Font8Effect=b0
+Font8EffectCol1=d-2013265920
+Font8EffectCol2=d0
+Font9Effect=b0
+Font9EffectCol1=d-2013265920
+Font9EffectCol2=d0
+Font10Effect=b2
+Font10EffectCol1=d1677721600
+Font10EffectCol2=d0
+Font11Effect=b2
+Font11EffectCol1=d1677721600
+Font11EffectCol2=d0
+Font12Effect=b2
+Font12EffectCol1=d1677721600
+Font12EffectCol2=d0
+Font13Effect=b2
+Font13EffectCol1=d1677721600
+Font13EffectCol2=d0
+Font14Effect=b2
+Font14EffectCol1=d1677721600
+Font14EffectCol2=d0
+Font15Effect=b0
+Font15EffectCol1=d654311423
+Font15EffectCol2=d16777215
+Font16Effect=b2
+Font16EffectCol1=d1677721600
+Font16EffectCol2=d0
+Font17Effect=b2
+Font17EffectCol1=d1677721600
+Font17EffectCol2=d0
+Font18Effect=b0
+Font18EffectCol1=d-2013265920
+Font18EffectCol2=d0
+Font19Effect=b0
+Font19EffectCol1=d1973790
+Font19EffectCol2=d0
+Font20Effect=b0
+Font20EffectCol1=d1973790
+Font20EffectCol2=d0
+Font21Set=b0
+Font21Size=b8
+Font21Sty=b1
+Font21Col=d16777215
+Font21Effect=b1
+Font21EffectCol1=d1763581470
+Font21EffectCol2=d754974720
+Font21As=w1792
+Font19Name=sVerdana
+Font20Name=sVerdana
+Font6Name=sVerdana
+GroupAlign=b0
+GRowHeight=b16
+Font22Set=b0
+Font22Size=b8
+Font22Sty=b1
+Font22Col=d16777215
+Font22Effect=b2
+Font22EffectCol1=d1677721600
+Font22EffectCol2=d0
+Font22As=w36608
+Font23Set=b0
+Font23Size=b8
+Font23Sty=b1
+Font23Col=d16777215
+Font23Effect=b2
+Font23EffectCol1=d1677721600
+Font23EffectCol2=d0
+Font23As=w36608
+DrawOverlayedStatus=b3
+CompactMode=b0
+SelTextColour=d16777215
+Font4Name=sVerdana
+Font5Name=sVerdana
+Font2Name=sSegoe UI
+Font7Name=sSegoe UI
+Font15Name=sTahoma
+HideOfflineRoot=b0
+Font8Name=sArial
+Font9Name=sArial
+Font18Name=sArial
+Font0Name=sArial
+Font1Name=sArial
+Font3Name=sArial
+Font10Name=sArial
+Font11Name=sArial
+Font12Name=sArial
+Font13Name=sArial
+Font14Name=sArial
+Font16Name=sArial
+Font17Name=sArial
+Font21Name=sArial
+Font22Name=sArial
+Font23Name=sArial
+
+
+[MyDetails]
+BackgroundColor=d8618883
+
+NicknameFont=sMicrosoft Sans Serif
+NicknameFontSize=b237
+NicknameFontSty=b1
+NicknameFontSet=b0
+NicknameFontCol=d16514043
+NicknameFontFlags=w32
+ProtocolFont=sTahoma
+ProtocolFontSize=b245
+ProtocolFontSty=b0
+ProtocolFontSet=b0
+ProtocolFontCol=d16514043
+ProtocolFontFlags=w32
+StatusFont=sMS Sans Serif
+StatusFontSize=b245
+StatusFontSty=b1
+StatusFontSet=b0
+StatusFontCol=d16514043
+StatusFontFlags=w32
+Status MessageFont=sMS Sans Serif
+Status MessageFontSize=b245
+Status MessageFontSty=b0
+Status MessageFontSet=b0
+Status MessageFontCol=d16514043
+Status MessageFontFlags=w32
+Listening ToFont=sMS Sans Serif
+Listening ToFontSize=b245
+Listening ToFontSty=b0
+Listening ToFontSet=b0
+Listening ToFontCol=d16514043
+Listening ToFontFlags=w32
+
+

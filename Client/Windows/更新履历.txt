@@ -1,0 +1,58 @@
+﻿NekoIM Windows Client ~ a Customized pack for Miranda NG
+packed by Un.Miz ( oekakisoli@gmail.com )
+
+NekoIM Homepage(主页) : http://im.nekonazo.com
+Git(代码托管) : https://github.com/Oekakisoli/NekoIM
+WIKI(文档) : http://wiki.oekaki.so/NekoIM 
+BBS(讨论) : http://bbs.nekonazo.com/u80.1/ 
+Blog(更新履历) : http://oekaki.so/?c=nekoim 目前正处在Alpha测试阶段。
+Download(资源发布) : http://bbs.nekonazo.com/n10344.1/
+发布者 : 同人企画 Project Oekakisoli ( http://oekaki.so / http://www.nekonazo.com)
+
+
+alpha test 6 (2014.5.11)
+ · 补完很多处翻译
+ · 默认皮肤对按钮背景未透明化的调整
+ · 聊天默认字体和大小调整（之前在某些系统字体很模糊）
+
+alpha test 5 (2014.5.5)
+ · 修复多处翻译错误
+ · 皮肤调整和上次没补完的问题
+ · 新白色皮肤（作者Miranda Final Pack），追加切换脚本
+ 
+alpha test 4 (2014.4.29)
+ · 核心和插件升级到0.94.9
+ · 修改了几处默认配置使之更人性化
+ · 修复多处汉化错误
+ · 调整配置，win8下不改变默认输入法
+
+pre-alpha test 4 (2013.7.14)
+ · 升级：大部分插件。解决设置到热键死机的问题
+ · 私聊窗口经常出现显示不了的图像的问题
+ · 去掉默认账号。不会导致覆盖掉原有账号设置。
+ · 皮肤细微修正
+
+pre-alpha test 3 (2013.7.12)
+ · 升级：核心升级到0.94.4
+ · 新增：全新猫谜娘皮肤+聊天窗皮肤
+ · 新增：插件“设置编辑器”
+ · 新增：断线重连
+ · 新增：导入/导出设置
+ · 优化：更完善的翻译
+ · 优化：组缩进
+ · 优化：管理书签醒目
+ · 优化默认配置：去掉群聊窗里 ~~++: 一串符号
+ · 优化默认配置：选择文本后不自动复制（选择框不消失）
+ · 优化默认配置：选项里默认新手模式
+ · 优化默认配置：多账号登录不每隔5秒换头部图标
+ · 优化默认配置：群聊自动显示出表情，不用点三次了 - 可能解决
+ · 优化默认配置：默认按enter发送消息
+ · 优化默认配置：登录自动设置上次状态消息（签名）
+ · 声音事件优化：接受消息不声音提示
+ · 登录自动进群 - 可用标签
+
+pre-alpha test 2 (2013.6.23)
+ · 服务端（OpenFire）：修复了若干不稳定的问题
+  
+pre-alpha test 1 (2013.6.21)
+ · NekoIM 人类用Windows客户端释出
