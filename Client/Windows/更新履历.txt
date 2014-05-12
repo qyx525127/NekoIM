@@ -1,13 +1,12 @@
 ﻿NekoIM Windows Client ~ a Customized pack for Miranda NG
 packed by Un.Miz ( oekakisoli@gmail.com )
 
-NekoIM Homepage(主页) : http://im.nekonazo.com
+发布者 : 同人企画 Project Oekakisoli ( http://oekaki.so / http://www.nekonazo.com)
 Git(代码托管) : https://github.com/Oekakisoli/NekoIM
 WIKI(文档) : http://wiki.oekaki.so/NekoIM 
 BBS(讨论) : http://bbs.nekonazo.com/u80.1/ 
 Blog(更新履历) : http://oekaki.so/?c=nekoim 目前正处在Alpha测试阶段。
 Download(资源发布) : http://bbs.nekonazo.com/n10344.1/
-发布者 : 同人企画 Project Oekakisoli ( http://oekaki.so / http://www.nekonazo.com)
 
 
 alpha test 6 (2014.5.11)
