@@ -23,7 +23,7 @@ NekoIM
 -------------
 * 服务端 - 在过去的半年里横向测试了ejabberd,Openfire和Tigase。而最终Tigase的overhead最小和稳定性最高，以及没有前两者的跨服务器传输大量数据频繁断开和出错的问题。于是基于Tigase做了一个fork，主要追加对i18N和本土化支持，修复数个SASL的UTF-8解析错误，将来还会做一些优化和增加插件例如用户搜索。最终采用Tigase (Cluster) + Postgresql （说起来最近研究Tigase的人貌似突然变多了
 * 客户端
-  * Windows - 基于Miranda NG的Custom Pack。猫聊主要完成了一个比官方完整很多的中文翻译包和自制界面，集成了Nekonazo娘的表情，并且通过长时间的聊天习惯总结优化和简化了大量默认配置，对字体方案优化。
+  * Windows - 基于Miranda NG的Custom Pack。猫聊主要完成了一个比官方完整很多的中文翻译包和自制界面，集成了Nekonazo娘的表情，并且通过长时间的聊天习惯总结优化和简化了大量默认配置，对字体方案优化。Github上会托管已改动的部分。源代码可以直接从Miranda NG的主页获取。
   * MAC
   * Linux
   * Android - Xabber+中文完整翻译+默认配置本土化+内置表情识别
@@ -31,5 +31,6 @@ NekoIM
 * 开放平台
   * 萌娘回路
   * 更新姬
-  * MoeID (?)
+  * 萌ID计划 (?)
   * etc
+
